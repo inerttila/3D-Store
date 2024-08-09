@@ -1,32 +1,41 @@
 # MedusaJS E-commerce Project
 
-To run this application you will need 
-* node >= 16.x.x installed
-* docker desktop
-* git
+To run this application you will need
 
-This project consist of 2 folders
-* Medusa backend + admin portal
-* Next.js storefront
+- node >= 16.x.x installed
+- docker desktop
+- git
 
-## Getting Started
-
-First start postgresql database by running the following command in root directory
 ```
 docker-compose up --build -d
 ```
 
-Then navigate into the Medusa backend folder and install dependencies
 ```
-yarn
+ npx create-medusa-app@latest --seed --db-url postgres://yourusername:yourpassword@host.docker.internal:5432/medusa_db
+
 ```
 
-Then navigate into the Next.js storefront folder and install dependencies
+cd medusa-backend
+
+localhost:7001
+
+--------------------- new wsl --------------------
+
 ```
-yarn
+ npx create-next-app -e https://github.com/medusajs/nextjs-starter-medusa medusa-storefront
 ```
 
-## Web links
+cd medusa-storefront
 
-* [MedusaJS Website](https://medusajs.com/)
-* [MedusaJS Setup Guide](https://docs.medusajs.com/create-medusa-app)
+```
+mv .env.template .env.local
+
+```
+
+---
+
+start both of them
+
+```
+yarn dev
+```
