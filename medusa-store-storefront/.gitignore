@@ -55,6 +55,3 @@ dump.rdb
 /blob-report/
 /playwright/.cache/
 /playwright/.auth
-package-lock.json
-.package-lock.json
-/package-lock.json
