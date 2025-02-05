@@ -1,10 +1,10 @@
-To start both of the projects run
+To start both of the projects, run:
 
 ```shell
 yarn dev
 ```
 
-The docker-compose.yml is for postgres db
+The `docker-compose.yml` file is for the PostgreSQL database.
 
 ```shell
 docker-compose up --build -d
